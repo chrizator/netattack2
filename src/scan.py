@@ -134,7 +134,7 @@ class WifiScan(object):
         channel = 1
         while channel < 12 and self.channelhop_active:
             subprocess.call("sudo iwconfig {} channel {}".format(self.interface, channel), shell=True)
-            sleep(0.1)
+            sleep(0.2)
             
             if channel >= 11:
                 channel = 1

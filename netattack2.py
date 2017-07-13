@@ -1,5 +1,5 @@
 # import the local 'build' folder with all its modules
-from src import *
+from src import printings
 
 # imports that won't cause errors
 import sys

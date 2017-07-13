@@ -11,7 +11,8 @@ def print_banner():
           "{Y}   / | / / ____/_  __/   |/_  __/_  __/   | / ____/ //_/{R}__ \\\n" \
           "{Y}  /  |/ / __/   / / / /| | / /   / / / /| |/ /   / ,<  _{R}_/ /\n" \
           "{Y} / /|  / /___  / / / ___ |/ /   / / / ___ / /___/ /| |{R}/ __/ \n" \
-          "{Y}/_/ |_/_____/ /_/ /_/  |_/_/   /_/ /_/  |_\____/_/ |_{R}/____/{N}\n\n".format(Y=YELLOW, N=NORMAL, R=RED))
+          "{Y}/_/ |_/_____/ /_/ /_/  |_/_/   /_/ /_/  |_\____/_/ |_{R}/____/{N}\n" \
+          "                   {R}b y   c h r i z a t o r{N}\n\n".format(Y=YELLOW, N=NORMAL, R=RED))
 
 def print_options():
     print("{Y}SCANNING                      {Y}DEAUTHING\n" \

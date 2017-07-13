@@ -132,11 +132,11 @@ class WifiScan(object):
             sys.exit("\n{R}ERROR: Your selected interface doesn't support channel hopping.{N}\n".format(R=RED, N=NORMAL))
 
         channel = 1
-        while channel < 14 and self.channelhop_active:
+        while channel < 12 and self.channelhop_active:
             subprocess.call("sudo iwconfig {} channel {}".format(self.interface, channel), shell=True)
             sleep(0.1)
             
-            if channel >= 13:
+            if channel >= 11:
                 channel = 1
                 continue
 

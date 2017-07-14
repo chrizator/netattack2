@@ -1,6 +1,3 @@
-# import the local 'build' folder with all its modules
-from src import *
-
 # imports that won't cause errors
 import sys
 import os
@@ -50,6 +47,7 @@ try:
 except ImportError:
     auto_installer()
 
+from src import *
 def get_option():
     '''
     Handling the user's input

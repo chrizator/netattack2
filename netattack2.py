@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # imports that won't cause errors
 import sys
 import os

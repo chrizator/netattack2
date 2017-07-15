@@ -29,7 +29,7 @@ def auto_installer():
     inst = raw_input("Do you want to automatically install all requirements? (y/n): ").lower()
 
     if inst in ('y', 'yes'):
-        print("{{Y}*{N}} Installing requirements, please stand by...".format(Y=YELLOW, N=NORMAL))
+        print("[{Y}*{N}] Installing requirements, please stand by...".format(Y=YELLOW, N=NORMAL))
         subprocess.call("sudo pip install netifaces", shell=True)
         subprocess.call("sudo apt-get install python-scapy -y > {}".format(os.devnull), shell=True)
         subprocess.call("sudo apt-get install python-nmap -y > {}".format(os.devnull), shell=True)

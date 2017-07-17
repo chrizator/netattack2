@@ -218,8 +218,8 @@ class WifiScan(object):
                 sniff(prn=callback, iface=self.interface, lfilter=lambda x: Dot11Beacon in x, store=0)
             else:
                 sniff(prn=callback, iface=self.interface, lfilter=lambda x: Dot11Beacon in x, timeout=self.timeout, store=0)
-        except Exception:
-            print("\nAn unexpected error occurred. Aborting...\n")
+        except Exception as e:
+            print("\nAn unexpected error occurred: {}\n".format(e))
             sys.exit(0)
 
     def output(self, bssid, essid, channel, encryption, strength, wps):

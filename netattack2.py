@@ -417,7 +417,7 @@ def arp_kick():
     gateway_mac = get_mac_by_ip(gateway_ip)
     local_ip = get_local_ip(interface)
     
-    arpspoof = spoof.Spoof(targets, local_ip, gateway_ip, gateway_mac, interface)
+    arpspoof = spoof.ARPSpoof(targets, gateway_ip, gateway_mac, interface)
 
     printings.arp_kick()
 
@@ -427,7 +427,7 @@ def arp_kick():
     disable_ip_forwarding()
 
     try:
-        arpspoof.start_arp_spoof()
+        arpspoof.arp_spoof()
     except:
         print("\n{R}RESTORING TARGETS. PLEASE STAND BY!{N}".format(R=RED, N=NORMAL))
         arpspoof.restore_arp()
@@ -440,7 +440,7 @@ def arp_spoof():
 
     arpspoof = spoof.ARPSpoof(targets, gateway_ip, gateway_mac, interface)
 
-    printings.arp_spoof()
+     #printings.arp_spoof()
 
     for mac in targets:
         print(" {G}->{N}  {mac} ({ip})".format(G=GREEN, N=NORMAL, mac=mac.upper(), ip=targets[mac]))
@@ -463,7 +463,7 @@ def dns_sniff():
     enable_ip_forwarding()
     
     arpspoof = spoof.ARPSpoof(targets, gateway_ip, gateway_mac, interface)
-    dnssniff = sniff.DNSSniff(local_ip)
+    dnssniff = sniff.DNSSniff(local_ip, interface)
 
     spoofT = Thread(target=arpspoof.arp_spoof, args=[])
     spoofT.daemon = True

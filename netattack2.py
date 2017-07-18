@@ -34,6 +34,7 @@ def auto_installer():
         subprocess.call("sudo apt-get install python-scapy -y > {}".format(os.devnull), shell=True)
         subprocess.call("sudo apt-get install python-nmap -y > {}".format(os.devnull), shell=True)
         subprocess.call("sudo apt-get install python-nfqueue -y > {}".format(os.devnull), shell=True)
+	subprocess.call("sudo apt-get install nmap -y > {}".format(os.devnull), shell=True)
         sys.exit("\n[{G}+{N}] Requirements installed.\n".format(G=GREEN, N=NORMAL))
 
     sys.exit(0)

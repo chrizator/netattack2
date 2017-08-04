@@ -215,9 +215,9 @@ class WifiScan(object):
 
         try:
             if not self.timeout:
-                sniff(prn=callback, iface=self.interface, lfilter=lambda x: Dot11Beacon in x, store=0)
+                sniff(prn=callback, str(iface=self.interface), lfilter=lambda x: Dot11Beacon in x, store=0)
             else:
-                sniff(prn=callback, iface=self.interface, lfilter=lambda x: Dot11Beacon in x, timeout=self.timeout, store=0)
+                sniff(prn=callback, str(iface=self.interface), lfilter=lambda x: Dot11Beacon in x, timeout=self.timeout, store=0)
         except Exception as e:
             print("\nAn unexpected error occurred: {}\n".format(e))
             sys.exit(0)

@@ -5,8 +5,8 @@ NETATTACK2 is a script written in python that can scan and attack networks. It i
 
 ## What can I do with it?
 ### SCANNING
-- Scan your network for active hosts, their operating syste, open ports and way more.
-- Scan for Access-Points and figure out encryption, WPS and other useful data.
+- Scan your network for active hosts, their operating system, open ports and way more.
+- Scan for Access-Points and figure out encryption type, WPS and other useful data.
 
 ### SPOOFING/SNIFFING
 - Simple ARP Spoofing
